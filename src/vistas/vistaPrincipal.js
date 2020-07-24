@@ -6,8 +6,8 @@ class VistaPrincipal extends PureComponent {
   render(){
     return (
       <View style={styles.container}>
-        <Atras col='green' press={console.log('verde')}/>
-        <Atras col='blue' press={console.log('azul')}/>
+        <Atras col='green' press={() => console.log('verde')}/>
+        <Atras col='blue' press={() => console.log('azul')}/>
       </View>
     );
   }

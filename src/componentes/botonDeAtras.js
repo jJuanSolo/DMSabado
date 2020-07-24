@@ -13,7 +13,7 @@ class BotonDeAtras extends PureComponent {
           name="arrow-left-circle"
           type="material-community"
           color={ col } 
-          onPress={()=> press}
+          onPress={press}
           />
       </View>
     );
