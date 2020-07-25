@@ -14,7 +14,7 @@ class BotonDeAtras extends PureComponent {
           type="material-community"
           color={ col } 
           onPress={press}
-          />
+          /> 
       </View>
     );
   }
