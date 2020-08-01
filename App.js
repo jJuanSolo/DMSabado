@@ -1,8 +1,10 @@
 import React, { PureComponent } from 'react';
 import { StyleSheet } from 'react-native';
 import firebase from 'firebase';
+import { Provider } from 'react-redux';
 import { decode, encode } from 'base-64'
 import VistaPrincipal from './src/vistas/vistaPrincipal';
+import store from './src/redux/store';
 
 if (!global.btoa) {
   global.btoa = encode;
@@ -29,7 +31,9 @@ class App extends PureComponent {
       firebase.initializeApp(firebaseConfig);
   }
     return (
-      <VistaPrincipal />
+      <Provider store={store}>
+          <VistaPrincipal />
+      </Provider>
     );
   }
 }
